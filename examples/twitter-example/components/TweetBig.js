@@ -1,17 +1,28 @@
+// react and react type
 import React, {PropTypes} from "react";
+// react native stuff
 import { StyleSheet, Text, Image, ScrollView, View } from 'react-native';
 
+// receive a data obj as prop
 const propTypes = {
   data: PropTypes.object,
 };
 
+// individual tweet page
 class TweetBig extends React.Component {
   render() {
+    // destuctor with text and user
+    // the fake data we created.
     const {
       text,
       user,
     } = this.props.data;
 
+    // scroll it
+    // user image
+    // username
+    // and another username
+    // and text
     return (
       <ScrollView>
         <View style={styles.tweetContainer}>
@@ -35,6 +46,7 @@ class TweetBig extends React.Component {
   }
 }
 
+// and style
 const styles = StyleSheet.create({
   retweetContainer: {
     margin: 10,
@@ -96,6 +108,8 @@ const styles = StyleSheet.create({
   },
 });
 
+// This TweetBig component
+// assign whatever type here
 TweetBig.propTypes = propTypes;
 
 export default TweetBig;

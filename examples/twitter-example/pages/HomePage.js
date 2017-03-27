@@ -1,22 +1,33 @@
+// react
 import React, {PropTypes} from "react";
+// style sheet and scroll view
 import { StyleSheet, ScrollView } from 'react-native';
 
+// tweet component
 import Tweet from '../components/Tweet';
+// what is tweet big??????????
 import TweetPage from '../components/TweetBig';
 
+// pass to route
 const propTypes = {
   toRoute: PropTypes.func.isRequired,
 };
 
 class HomePage extends React.Component {
+  // constructor
   constructor(props) {
+    // super
     super(props);
+    // flex style
     this.styles = StyleSheet.create({
       container: {
         flex: 1,
         backgroundColor: '#f5f8fa',
       },
     });
+
+    // state
+    // sample tweets
     this.state = {
       tweets: [
         {
@@ -39,10 +50,17 @@ class HomePage extends React.Component {
         },
       ],
     };
+
+    //
     this.goToTweet = this.goToTweet.bind(this);
   }
 
+  // Go to somewhere
   goToTweet(tweetData) {
+    // to route,
+    // name of route
+    // component
+    // with data
     this.props.toRoute({
       name: 'Tweet',
       component: TweetPage,
@@ -50,6 +68,15 @@ class HomePage extends React.Component {
     });
   }
 
+  // render
+  // const var tweets
+  // this state has tweets
+  // map each
+  // Tweet is a component
+  // we pass down the data
+  // one press, go to individual tweet
+  // what is this.goToRoute
+  // we pass down the goToTweet (with name, comp and data)
   render() {
     const Tweets = this.state.tweets.map((tweetData) => {
       return <Tweet {...tweetData} onPress={this.goToRoute} goToTweet={this.goToTweet} />;

@@ -1,6 +1,7 @@
 import React from "react";
 import { StyleSheet, TouchableHighlight, Image } from 'react-native';
 
+// Compose just a icon
 export default class ComposeIcon extends React.Component {
   constructor(props) {
     super(props);

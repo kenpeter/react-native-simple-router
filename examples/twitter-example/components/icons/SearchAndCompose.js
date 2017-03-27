@@ -1,8 +1,14 @@
+// react and prop type
 import React, {PropTypes} from "react";
+// style sheet
+// and view
 import { StyleSheet, View } from 'react-native';
 
+// search, what is search, just a icon, with toRoute method
 import SearchIcon from './Search';
+// just a image button
 import ComposeIcon from './Compose';
+// 
 import SearchPage from '../../pages/SearchPage';
 import SearchBar from './SearchBar';
 
@@ -38,6 +44,10 @@ class SearchAndCompose extends React.Component {
     this.goToSearch = this.goToSearch.bind(this);
   }
 
+  // go to search
+  // wrap this.props.toRoute
+  // pass this to component. that is why call bubble????
+  // we can pass the toRoute deep down, but this requires parent child relationship
   goToSearch() {
     this.props.toRoute({
       name: 'Search',

@@ -7,6 +7,7 @@ const propTypes = {
   toRoute: PropTypes.func.isRequired,
 };
 
+// add people has to route method
 class AddPeopleIcon extends React.Component {
   constructor(props) {
     super(props);

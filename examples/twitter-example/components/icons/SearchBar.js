@@ -1,6 +1,7 @@
 import React from "react";
 import { StyleSheet, TextInput } from 'react-native';
 
+// just a input box with 
 export default class SearchBar extends React.Component {
   constructor(props) {
     super(props);

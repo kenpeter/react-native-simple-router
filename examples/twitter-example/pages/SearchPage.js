@@ -1,6 +1,9 @@
+// react
 import React from "react";
+// style, text, view
 import { StyleSheet, Text, View } from 'react-native';
 
+// search page is style + text
 export default class SearchPage extends React.Component {
   constructor(props) {
     super(props);
